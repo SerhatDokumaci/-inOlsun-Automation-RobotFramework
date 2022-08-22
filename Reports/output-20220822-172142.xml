@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 5.0.1 (Python 3.10.5 on win32)" generated="20220822 17:21:42.231" rpa="false" schemaversion="3">
+<suite id="s1" name="isinOlsunSearchedPageTest" source="C:\Users\Javesque\PycharmProjects\isinolsun\Tests\isinOlsunSearchedPageTest.robot">
+<test id="s1-t1" name="Verify Jobs Location Test" line="11">
+<kw name="Create Session" library="utilsApp" type="SETUP">
+<kw name="Set Selenium Speed" library="SeleniumLibrary">
+<arg>0.5 Seconds</arg>
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<status status="PASS" starttime="20220822 17:21:42.468" endtime="20220822 17:21:42.469"/>
+</kw>
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>About:Blank</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20220822 17:21:42.469" level="INFO">Opening browser 'Chrome' to base url 'About:Blank'.</msg>
+<status status="PASS" starttime="20220822 17:21:42.469" endtime="20220822 17:21:44.390"/>
+</kw>
+<kw name="Go To" library="SeleniumLibrary">
+<arg>${URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20220822 17:21:44.390" level="INFO">Opening url 'https://isinolsun.com/'</msg>
+<status status="PASS" starttime="20220822 17:21:44.390" endtime="20220822 17:21:50.502"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20220822 17:21:50.502" endtime="20220822 17:21:51.132"/>
+</kw>
+<status status="PASS" starttime="20220822 17:21:42.468" endtime="20220822 17:21:51.132"/>
+</kw>
+<kw name="Go To All Jobs" library="homePageApp">
+<kw name="Verify Homepage" library="homePage">
+<kw name="Location Should Be" library="SeleniumLibrary">
+<arg>https://isinolsun.com/</arg>
+<doc>Verifies that the current URL is exactly ``url``.</doc>
+<msg timestamp="20220822 17:21:51.639" level="INFO">Current location is 'https://isinolsun.com/'.</msg>
+<status status="PASS" starttime="20220822 17:21:51.133" endtime="20220822 17:21:51.639"/>
+</kw>
+<status status="PASS" starttime="20220822 17:21:51.133" endtime="20220822 17:21:51.639"/>
+</kw>
+<kw name="Go to All Jobs Page" library="homePage">
+<kw name="click" library="utils">
+<arg>css=[data-test='all-jobs-link']</arg>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>${SELECTOR}</arg>
+<arg>${TIMEOUT}</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20220822 17:21:51.640" endtime="20220822 17:21:52.162"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${SELECTOR}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220822 17:21:52.163" level="INFO">Clicking element 'css=[data-test='all-jobs-link']'.</msg>
+<status status="PASS" starttime="20220822 17:21:52.162" endtime="20220822 17:21:54.730"/>
+</kw>
+<status status="PASS" starttime="20220822 17:21:51.640" endtime="20220822 17:21:54.730"/>
+</kw>
+<status status="PASS" starttime="20220822 17:21:51.640" endtime="20220822 17:21:54.730"/>
+</kw>
+<status status="PASS" starttime="20220822 17:21:51.133" endtime="20220822 17:21:54.730"/>
+</kw>
+<kw name="Search Job" library="allJobsPageApp">
+<kw name="Search Box İnput" library="allJobsPage">
+<kw name="click" library="utils">
+<arg>id=position-search</arg>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>${SELECTOR}</arg>
+<arg>${TIMEOUT}</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20220822 17:21:54.744" endtime="20220822 17:21:55.284"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${SELECTOR}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220822 17:21:55.284" level="INFO">Clicking element 'id=position-search'.</msg>
+<status status="PASS" starttime="20220822 17:21:55.284" endtime="20220822 17:21:56.359"/>
+</kw>
+<status status="PASS" starttime="20220822 17:21:54.744" endtime="20220822 17:21:56.359"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id=position-search</arg>
+<arg>Şoför</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220822 17:21:56.360" level="INFO">Typing text 'Şoför' into text field 'id=position-search'.</msg>
+<status status="PASS" starttime="20220822 17:21:56.359" endtime="20220822 17:21:57.984"/>
+</kw>
+<status status="PASS" starttime="20220822 17:21:54.744" endtime="20220822 17:21:57.984"/>
+</kw>
+<kw name="Location Box İnput" library="allJobsPage">
+<kw name="click" library="utils">
+<arg>id=location-search</arg>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>${SELECTOR}</arg>
+<arg>${TIMEOUT}</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20220822 17:21:57.985" endtime="20220822 17:21:58.505"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${SELECTOR}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220822 17:21:58.506" level="INFO">Clicking element 'id=location-search'.</msg>
+<status status="PASS" starttime="20220822 17:21:58.505" endtime="20220822 17:21:59.593"/>
+</kw>
+<status status="PASS" starttime="20220822 17:21:57.985" endtime="20220822 17:21:59.593"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id=location-search</arg>
+<arg>İstanbul</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220822 17:21:59.594" level="INFO">Typing text 'İstanbul' into text field 'id=location-search'.</msg>
+<status status="PASS" starttime="20220822 17:21:59.594" endtime="20220822 17:22:01.234"/>
+</kw>
+<kw name="click" library="utils">
+<arg>css=[data-test='job-search-button']</arg>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>${SELECTOR}</arg>
+<arg>${TIMEOUT}</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20220822 17:22:01.235" endtime="20220822 17:22:01.755"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${SELECTOR}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220822 17:22:01.756" level="INFO">Clicking element 'css=[data-test='job-search-button']'.</msg>
+<status status="PASS" starttime="20220822 17:22:01.755" endtime="20220822 17:22:02.846"/>
+</kw>
+<status status="PASS" starttime="20220822 17:22:01.234" endtime="20220822 17:22:02.846"/>
+</kw>
+<status status="PASS" starttime="20220822 17:21:57.985" endtime="20220822 17:22:02.846"/>
+</kw>
+<kw name="allJobsPage.Click Find Job Button">
+<msg timestamp="20220822 17:22:02.850" level="FAIL">No keyword with name 'allJobsPage.Click Find Job Button' found.</msg>
+<status status="FAIL" starttime="20220822 17:22:02.850" endtime="20220822 17:22:02.850"/>
+</kw>
+<status status="FAIL" starttime="20220822 17:21:54.743" endtime="20220822 17:22:02.851"/>
+</kw>
+<kw name="Verify Jobs Location" library="isinOlsunSearchedPageApp">
+<status status="NOT RUN" starttime="20220822 17:22:02.852" endtime="20220822 17:22:02.852"/>
+</kw>
+<kw name="Close Session" library="utilsApp" type="TEARDOWN">
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20220822 17:22:02.853" endtime="20220822 17:22:05.484"/>
+</kw>
+<status status="PASS" starttime="20220822 17:22:02.852" endtime="20220822 17:22:05.485"/>
+</kw>
+<status status="FAIL" starttime="20220822 17:21:42.467" endtime="20220822 17:22:05.485">No keyword with name 'allJobsPage.Click Find Job Button' found.</status>
+</test>
+<status status="FAIL" starttime="20220822 17:21:42.233" endtime="20220822 17:22:05.487"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="0" fail="1" skip="0" id="s1" name="isinOlsunSearchedPageTest">isinOlsunSearchedPageTest</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

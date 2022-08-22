@@ -1,0 +1,328 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 5.0.1 (Python 3.10.5 on win32)" generated="20220821 17:51:44.450" rpa="false" schemaversion="3">
+<suite id="s1" name="isinOlsunSearchedPageTest" source="C:\Users\Javesque\PycharmProjects\isinolsun\Tests\isinOlsunSearchedPageTest.robot">
+<test id="s1-t1" name="Verify Jobs Location Test" line="11">
+<kw name="Create Session" library="utilsApp" type="SETUP">
+<kw name="Set Selenium Speed" library="SeleniumLibrary">
+<arg>0.5 Seconds</arg>
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<status status="PASS" starttime="20220821 17:51:44.668" endtime="20220821 17:51:44.668"/>
+</kw>
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>About:Blank</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20220821 17:51:44.668" level="INFO">Opening browser 'Chrome' to base url 'About:Blank'.</msg>
+<status status="PASS" starttime="20220821 17:51:44.668" endtime="20220821 17:51:46.550"/>
+</kw>
+<kw name="Go To" library="SeleniumLibrary">
+<arg>${URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20220821 17:51:46.550" level="INFO">Opening url 'https://isinolsun.com/'</msg>
+<status status="PASS" starttime="20220821 17:51:46.550" endtime="20220821 17:51:49.790"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20220821 17:51:49.790" endtime="20220821 17:51:50.419"/>
+</kw>
+<status status="PASS" starttime="20220821 17:51:44.667" endtime="20220821 17:51:50.419"/>
+</kw>
+<kw name="Go To All Jobs" library="homePageApp">
+<kw name="Verify Homepage" library="homePage">
+<kw name="Location Should Be" library="SeleniumLibrary">
+<arg>https://isinolsun.com/</arg>
+<doc>Verifies that the current URL is exactly ``url``.</doc>
+<msg timestamp="20220821 17:51:50.927" level="INFO">Current location is 'https://isinolsun.com/'.</msg>
+<status status="PASS" starttime="20220821 17:51:50.420" endtime="20220821 17:51:50.927"/>
+</kw>
+<status status="PASS" starttime="20220821 17:51:50.420" endtime="20220821 17:51:50.927"/>
+</kw>
+<kw name="Go to All Jobs Page" library="homePage">
+<kw name="click" library="utils">
+<arg>css=[data-test='all-jobs-link']</arg>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>${SELECTOR}</arg>
+<arg>${TIMEOUT}</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20220821 17:51:50.928" endtime="20220821 17:51:51.450"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${SELECTOR}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220821 17:51:51.450" level="INFO">Clicking element 'css=[data-test='all-jobs-link']'.</msg>
+<status status="PASS" starttime="20220821 17:51:51.450" endtime="20220821 17:51:54.295"/>
+</kw>
+<status status="PASS" starttime="20220821 17:51:50.927" endtime="20220821 17:51:54.295"/>
+</kw>
+<status status="PASS" starttime="20220821 17:51:50.927" endtime="20220821 17:51:54.295"/>
+</kw>
+<status status="PASS" starttime="20220821 17:51:50.420" endtime="20220821 17:51:54.295"/>
+</kw>
+<kw name="Search Job" library="allJobsPageApp">
+<kw name="Search Box İnput" library="allJobsPage">
+<kw name="click" library="utils">
+<arg>id=position-search</arg>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>${SELECTOR}</arg>
+<arg>${TIMEOUT}</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20220821 17:51:54.296" endtime="20220821 17:51:54.817"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${SELECTOR}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220821 17:51:54.818" level="INFO">Clicking element 'id=position-search'.</msg>
+<status status="PASS" starttime="20220821 17:51:54.817" endtime="20220821 17:51:55.893"/>
+</kw>
+<status status="PASS" starttime="20220821 17:51:54.296" endtime="20220821 17:51:55.893"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id=position-search</arg>
+<arg>Şoför</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220821 17:51:55.894" level="INFO">Typing text 'Şoför' into text field 'id=position-search'.</msg>
+<status status="PASS" starttime="20220821 17:51:55.893" endtime="20220821 17:51:57.506"/>
+</kw>
+<status status="PASS" starttime="20220821 17:51:54.296" endtime="20220821 17:51:57.506"/>
+</kw>
+<kw name="Location Box İnput" library="allJobsPage">
+<kw name="click" library="utils">
+<arg>id=location-search</arg>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>${SELECTOR}</arg>
+<arg>${TIMEOUT}</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20220821 17:51:57.507" endtime="20220821 17:51:58.029"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${SELECTOR}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220821 17:51:58.029" level="INFO">Clicking element 'id=location-search'.</msg>
+<status status="PASS" starttime="20220821 17:51:58.029" endtime="20220821 17:51:59.117"/>
+</kw>
+<status status="PASS" starttime="20220821 17:51:57.506" endtime="20220821 17:51:59.117"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id=location-search</arg>
+<arg>İstanbul</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220821 17:51:59.118" level="INFO">Typing text 'İstanbul' into text field 'id=location-search'.</msg>
+<status status="PASS" starttime="20220821 17:51:59.117" endtime="20220821 17:52:00.762"/>
+</kw>
+<status status="PASS" starttime="20220821 17:51:57.506" endtime="20220821 17:52:00.762"/>
+</kw>
+<kw name="Click Appeared Location" library="allJobsPage">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>id=rbt-menu-item-0</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220821 17:52:00.762" level="INFO">Clicking element 'id=rbt-menu-item-0'.</msg>
+<status status="PASS" starttime="20220821 17:52:00.762" endtime="20220821 17:52:01.838"/>
+</kw>
+<status status="PASS" starttime="20220821 17:52:00.762" endtime="20220821 17:52:01.838"/>
+</kw>
+<status status="PASS" starttime="20220821 17:51:54.296" endtime="20220821 17:52:01.838"/>
+</kw>
+<kw name="Verify Jobs Location" library="isinOlsunSearchedPageApp">
+<kw name="Verify Searched Page" library="isinOlsunSearchedPage">
+<kw name="Wait Until Element Contains" library="SeleniumLibrary">
+<arg>css=[data-test='result-title']</arg>
+<arg>İstanbul Şoför İş İlanları</arg>
+<doc>Waits until the element ``locator`` contains ``text``.</doc>
+<status status="PASS" starttime="20220821 17:52:01.839" endtime="20220821 17:52:02.885"/>
+</kw>
+<status status="PASS" starttime="20220821 17:52:01.839" endtime="20220821 17:52:02.885"/>
+</kw>
+<kw name="Verify Job Location" library="isinOlsunSearchedPage">
+<kw name="Verify Location" library="utils">
+<arg>${JOB1}</arg>
+<arg>${JOB LOCATOR1}</arg>
+<arg>${JOB LOCATOR2}</arg>
+<arg>${EXPECTED}</arg>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>${SELECTOR}</arg>
+<arg>${TIMEOUT}</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20220821 17:52:02.886" endtime="20220821 17:52:03.407"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${SELECTOR}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220821 17:52:03.408" level="INFO">Clicking element 'css=[data-test='job-list-item'][class='jsx-1449613932 animated page-job-search-list-item active']'.</msg>
+<status status="PASS" starttime="20220821 17:52:03.407" endtime="20220821 17:52:04.453"/>
+</kw>
+<kw name="Element Should Contain" library="SeleniumLibrary">
+<arg>${LOCATOR1}</arg>
+<arg>${EXPECTED LOCATE}</arg>
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<msg timestamp="20220821 17:52:05.500" level="INFO">Element 'css=[data-test='job-list-city'].jsx-1449613932.card-city' contains text 'İstanbul'.</msg>
+<status status="PASS" starttime="20220821 17:52:04.453" endtime="20220821 17:52:05.500"/>
+</kw>
+<kw name="Element Should Contain" library="SeleniumLibrary">
+<arg>${LOCATOR2}</arg>
+<arg>${EXPECTED LOCATE}</arg>
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<msg timestamp="20220821 17:52:06.545" level="INFO">Element 'css=[data-test='job-list-city'].jsx-1966909199.city' contains text 'İstanbul'.</msg>
+<status status="PASS" starttime="20220821 17:52:05.500" endtime="20220821 17:52:06.545"/>
+</kw>
+<status status="PASS" starttime="20220821 17:52:02.886" endtime="20220821 17:52:06.545"/>
+</kw>
+<kw name="Verify Location" library="utils">
+<arg>${JOB2}</arg>
+<arg>${JOB LOCATOR1}</arg>
+<arg>${JOB LOCATOR2}</arg>
+<arg>${EXPECTED}</arg>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>${SELECTOR}</arg>
+<arg>${TIMEOUT}</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20220821 17:52:06.546" endtime="20220821 17:52:07.067"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${SELECTOR}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220821 17:52:07.068" level="INFO">Clicking element 'css=[data-test='job-list-item'][class='jsx-1449613932 animated page-job-search-list-item']:nth-of-type(3)'.</msg>
+<status status="PASS" starttime="20220821 17:52:07.067" endtime="20220821 17:52:08.141"/>
+</kw>
+<kw name="Element Should Contain" library="SeleniumLibrary">
+<arg>${LOCATOR1}</arg>
+<arg>${EXPECTED LOCATE}</arg>
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<msg timestamp="20220821 17:52:09.184" level="INFO">Element 'css=[data-test='job-list-city'].jsx-1449613932.card-city' contains text 'İstanbul'.</msg>
+<status status="PASS" starttime="20220821 17:52:08.141" endtime="20220821 17:52:09.184"/>
+</kw>
+<kw name="Element Should Contain" library="SeleniumLibrary">
+<arg>${LOCATOR2}</arg>
+<arg>${EXPECTED LOCATE}</arg>
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<msg timestamp="20220821 17:52:10.214" level="INFO">Element 'css=[data-test='job-list-city'].jsx-1966909199.city' contains text 'İstanbul'.</msg>
+<status status="PASS" starttime="20220821 17:52:09.184" endtime="20220821 17:52:10.214"/>
+</kw>
+<status status="PASS" starttime="20220821 17:52:06.545" endtime="20220821 17:52:10.214"/>
+</kw>
+<kw name="Verify Location" library="utils">
+<arg>${JOB3}</arg>
+<arg>${JOB LOCATOR1}</arg>
+<arg>${JOB LOCATOR2}</arg>
+<arg>${EXPECTED}</arg>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>${SELECTOR}</arg>
+<arg>${TIMEOUT}</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20220821 17:52:10.214" endtime="20220821 17:52:10.737"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${SELECTOR}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220821 17:52:10.737" level="INFO">Clicking element 'css=[data-test='job-list-item'][class='jsx-1449613932 animated page-job-search-list-item']:nth-of-type(4)'.</msg>
+<status status="PASS" starttime="20220821 17:52:10.737" endtime="20220821 17:52:11.797"/>
+</kw>
+<kw name="Element Should Contain" library="SeleniumLibrary">
+<arg>${LOCATOR1}</arg>
+<arg>${EXPECTED LOCATE}</arg>
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<msg timestamp="20220821 17:52:12.812" level="INFO">Element 'css=[data-test='job-list-city'].jsx-1449613932.card-city' contains text 'İstanbul'.</msg>
+<status status="PASS" starttime="20220821 17:52:11.797" endtime="20220821 17:52:12.812"/>
+</kw>
+<kw name="Element Should Contain" library="SeleniumLibrary">
+<arg>${LOCATOR2}</arg>
+<arg>${EXPECTED LOCATE}</arg>
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<msg timestamp="20220821 17:52:13.840" level="INFO">Element 'css=[data-test='job-list-city'].jsx-1966909199.city' contains text 'İstanbul'.</msg>
+<status status="PASS" starttime="20220821 17:52:12.812" endtime="20220821 17:52:13.840"/>
+</kw>
+<status status="PASS" starttime="20220821 17:52:10.214" endtime="20220821 17:52:13.841"/>
+</kw>
+<kw name="Verify Location" library="utils">
+<arg>${JOB4}</arg>
+<arg>${JOB LOCATOR1}</arg>
+<arg>${JOB LOCATOR2}</arg>
+<arg>${EXPECTED}</arg>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>${SELECTOR}</arg>
+<arg>${TIMEOUT}</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20220821 17:52:13.841" endtime="20220821 17:52:14.362"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${SELECTOR}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220821 17:52:14.363" level="INFO">Clicking element 'css=[data-test='job-list-item'][class='jsx-1449613932 animated page-job-search-list-item']:nth-of-type(5)'.</msg>
+<status status="PASS" starttime="20220821 17:52:14.362" endtime="20220821 17:52:15.438"/>
+</kw>
+<kw name="Element Should Contain" library="SeleniumLibrary">
+<arg>${LOCATOR1}</arg>
+<arg>${EXPECTED LOCATE}</arg>
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<msg timestamp="20220821 17:52:16.480" level="INFO">Element 'css=[data-test='job-list-city'].jsx-1449613932.card-city' contains text 'İstanbul'.</msg>
+<status status="PASS" starttime="20220821 17:52:15.438" endtime="20220821 17:52:16.480"/>
+</kw>
+<kw name="Element Should Contain" library="SeleniumLibrary">
+<arg>${LOCATOR2}</arg>
+<arg>${EXPECTED LOCATE}</arg>
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<msg timestamp="20220821 17:52:17.522" level="INFO">Element 'css=[data-test='job-list-city'].jsx-1966909199.city' contains text 'İstanbul'.</msg>
+<status status="PASS" starttime="20220821 17:52:16.480" endtime="20220821 17:52:17.522"/>
+</kw>
+<status status="PASS" starttime="20220821 17:52:13.841" endtime="20220821 17:52:17.522"/>
+</kw>
+<kw name="Verify Location" library="utils">
+<arg>${JOB5}</arg>
+<arg>${JOB LOCATOR1}</arg>
+<arg>${JOB LOCATOR2}</arg>
+<arg>${EXPECTED}</arg>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>${SELECTOR}</arg>
+<arg>${TIMEOUT}</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20220821 17:52:17.523" endtime="20220821 17:52:18.044"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${SELECTOR}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220821 17:52:18.044" level="INFO">Clicking element 'css=[data-test='job-list-item'][class='jsx-1449613932 animated page-job-search-list-item']:nth-of-type(6)'.</msg>
+<status status="PASS" starttime="20220821 17:52:18.044" endtime="20220821 17:52:19.120"/>
+</kw>
+<kw name="Element Should Contain" library="SeleniumLibrary">
+<arg>${LOCATOR1}</arg>
+<arg>${EXPECTED LOCATE}</arg>
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<msg timestamp="20220821 17:52:20.148" level="INFO">Element 'css=[data-test='job-list-city'].jsx-1449613932.card-city' contains text 'İstanbul'.</msg>
+<status status="PASS" starttime="20220821 17:52:19.120" endtime="20220821 17:52:20.148"/>
+</kw>
+<kw name="Element Should Contain" library="SeleniumLibrary">
+<arg>${LOCATOR2}</arg>
+<arg>${EXPECTED LOCATE}</arg>
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<msg timestamp="20220821 17:52:21.191" level="INFO">Element 'css=[data-test='job-list-city'].jsx-1966909199.city' contains text 'İstanbul'.</msg>
+<status status="PASS" starttime="20220821 17:52:20.148" endtime="20220821 17:52:21.191"/>
+</kw>
+<status status="PASS" starttime="20220821 17:52:17.523" endtime="20220821 17:52:21.191"/>
+</kw>
+<status status="PASS" starttime="20220821 17:52:02.885" endtime="20220821 17:52:21.191"/>
+</kw>
+<status status="PASS" starttime="20220821 17:52:01.839" endtime="20220821 17:52:21.191"/>
+</kw>
+<kw name="Close Session" library="utilsApp" type="TEARDOWN">
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20220821 17:52:21.192" endtime="20220821 17:52:23.772"/>
+</kw>
+<status status="PASS" starttime="20220821 17:52:21.192" endtime="20220821 17:52:23.772"/>
+</kw>
+<status status="PASS" starttime="20220821 17:51:44.666" endtime="20220821 17:52:23.773"/>
+</test>
+<status status="PASS" starttime="20220821 17:51:44.452" endtime="20220821 17:52:23.774"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="isinOlsunSearchedPageTest">isinOlsunSearchedPageTest</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
